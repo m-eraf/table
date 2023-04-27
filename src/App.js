@@ -14,13 +14,15 @@ const App = () => {
     lastName: "",
     phoneNumber: "",
   });
+  const [refreshPage, setRefreshPage] = useState(false);
+
 
   useEffect(() => {
     const storedContacts = localStorage.getItem("contacts");
     if (storedContacts) {
       setContacts(JSON.parse(storedContacts));
     }
-  }, []);
+  }, [refreshPage]);
 
   const handleAddFormChange = (event) => {
     event.preventDefault();
@@ -57,8 +59,8 @@ const App = () => {
     const newContacts = [...contacts, newContact];
     setContacts(newContacts);
     localStorage.setItem("contacts", JSON.stringify(newContacts));
-    setAddFormData({ firstName: "", lastName: "", phoneNumber: "" });
     message.success("Contact added successfully!", [1]);
+    setRefreshPage(!refreshPage);
   };
   
   
@@ -67,14 +69,10 @@ const App = () => {
       title: 'Are you sure you want to delete this contact?',
       onOk() {
         const newContacts = [...contacts];
-
         const index = contacts.findIndex((contact) => contact.id === contactId);
-
         newContacts.splice(index, 1);
-
         setContacts(newContacts);
         localStorage.setItem("contacts", JSON.stringify(newContacts));
-
         message.success("Contact deleted successfully!", [1]);
       },
       onCancel() {
