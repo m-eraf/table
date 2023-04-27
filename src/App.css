@@ -6,6 +6,16 @@
   justify-content: center;
   height: 30vh;
 }
+.he {
+  margin: 0 auto;
+  justify-content: center;
+  width: 80%;
+  max-width: 900px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
 .btn{
   text-align: center;
     background-color:#002ead;
@@ -26,7 +36,6 @@
 
   padding: 8px;
   border-radius: 20px;
-  /* border: 1px solid black; */
   height: 20px;
   width: 500px;
 }
@@ -35,7 +44,7 @@
   justify-content: center;
   align-items: center;
   width: 80%;
-  max-width: 500px;
+  max-width: 600px;
   margin: 0 auto;
   padding: 20px;
   background-color: #f9f9f9;
@@ -153,10 +162,14 @@
   border-radius: 5px;
   width: 50px;
   border: none;
-  background-color: #2b54c6;
+  background-color: #ca8383;
   color: #fff;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
+}
+.na {
+  border-collapse: collapse;
+  width: 100px;
 }
 .jj {
   display: flex;
@@ -176,9 +189,12 @@
   border: 1px solid black;
   max-width: 800px;
   margin: 0 auto;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
 }
 
 .contacts-table {
+  padding: 12px;
   border: 1px solid black;
   border-collapse: collapse;
   width: 100%;
@@ -186,6 +202,7 @@
 
 .contacts-table th {
   border: 1px solid black;
+  background-color: #f2f2f2;
   border-bottom: 1px solid #ccc;
   padding: 8px;
   text-align: center;
@@ -200,11 +217,12 @@
 
 .contacts-table tr:hover {
   border: 1px solid black;
-  background-color: #f5f5f5;
+  background-color: #e6e6e6;
 }
 
 .contacts-table .delete-btn {
   border: 1px solid black;
+  border-radius: 20px;
   background-color: #f44336;
   border: none;
   color: white;
